@@ -17,9 +17,8 @@ public class Coche {
 
     }
 
-    public Coche(String marca, String modelo, String tipoMotor,
-                 double precioBase, boolean tieneAireAcondicionado, boolean tieneCierreCentralizado,
-                 boolean tienePinturaMetalizada) {
+    public Coche(String marca, String modelo, String tipoMotor, double precioBase, boolean tieneAireAcondicionado,
+                 boolean tieneCierreCentralizado, boolean tienePinturaMetalizada) {
         this.marca = marca ;
         this.modelo = modelo;
         this.tipoMotor = tipoMotor;
