@@ -1,8 +1,11 @@
 import java.util.Random;
 
 public class Coche {
-    final static String[] marcas={"Audi","BMW","Cadillac","Peugeot","Kia"};
-    final static String[] tiposDeModelo={"A","B","C","D"};
+    final static String[] marcas={"Audi","BMW","Peugeot","Renault"};
+    final static String[] tiposDeModeloAudi={"A1","A3","A4","RS6"};
+    final static String[] tiposDeModeloBMW={"Serie1","Serie2","Serie3","Serie4"};
+    final static String[] tiposDeModeloPeugeot={"208","308","508","3008"};
+    final static String[] TiposDeModeloRenault={"Megane","Clio","Captur","Kadjar"};
     final static String[] motorizacion= {"Gasolina","Diesel","Hibrido","Híbrido Enchufable","Eléctrico"};
     int idCoche;
     String marca;
@@ -17,15 +20,18 @@ public class Coche {
 
     }
 
-    public Coche(String marca, String modelo, String tipoMotor, double precioBase, boolean tieneAireAcondicionado,
+    public Coche(String marca, String tipoMotor, double precioBase, boolean tieneAireAcondicionado,
                  boolean tieneCierreCentralizado, boolean tienePinturaMetalizada) {
         this.marca = marca ;
-        this.modelo = modelo;
         this.tipoMotor = tipoMotor;
         this.precioBase = precioBase;
         this.tieneAireAcondicionado = tieneAireAcondicionado;
         this.tieneCierreCentralizado = tieneCierreCentralizado;
         this.tienePinturaMetalizada = tienePinturaMetalizada;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     public void setIdCoche(int idMiCoche) {
