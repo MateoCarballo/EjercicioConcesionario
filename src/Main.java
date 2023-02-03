@@ -16,13 +16,24 @@ public class Main {
         for (int i = 0; i < miConcesionario.length; i++) {
             miConcesionario[i] = new Coche(
                     Coche.marcas[Coche.numAleatorioI(0, Coche.marcas.length - 1)],
-                    Coche.tiposDeModelo[Coche.numAleatorioI(0, Coche.tiposDeModelo.length - 1)],
                     Coche.motorizacion[Coche.numAleatorioI(0, Coche.motorizacion.length - 1)],
                     Coche.numAleatorioI(15000, 35000),
                     Coche.booleanoAleatorio(),
                     Coche.booleanoAleatorio(),
                     Coche.booleanoAleatorio());
             miConcesionario[i].setIdCoche(idCoche);
+            if(miConcesionario[i].marca.compareToIgnoreCase("Audi")==0){
+                miConcesionario[i].setModelo(Coche.tiposDeModeloAudi[Coche.numAleatorioI(0,4)]);
+            }
+            if(miConcesionario[i].marca.compareToIgnoreCase("BMW")==0){
+                miConcesionario[i].setModelo(Coche.tiposDeModeloBMW[Coche.numAleatorioI(0,4)]);
+            }
+            if(miConcesionario[i].marca.compareToIgnoreCase("Peugeot")==0){
+                miConcesionario[i].setModelo(Coche.tiposDeModeloAudi[Coche.numAleatorioI(0,4)]);
+            }
+            if(miConcesionario[i].marca.compareToIgnoreCase("Renault")==0){
+                miConcesionario[i].setModelo(Coche.tiposDeModeloAudi[Coche.numAleatorioI(0,4)]);
+            }
             idCoche++;
         }
         do {
